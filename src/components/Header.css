@@ -6,17 +6,46 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
   z-index: 100;
   height: 70px;
+  background-image: url('/assets/images/banner-45.jpg'); /* Add background image */
+  background-size: cover;
+  background-position: center top;
+}
+
+/* Add an overlay to ensure the menu items remain readable */
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.85); /* Add white translucent overlay */
 }
 
 .header-container {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   padding: 0 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Perfect centering for navigation */
+.main-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .menu-toggle {
@@ -40,20 +69,15 @@
   transition: all 0.3s ease;
 }
 
-.main-nav {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .nav-list {
   display: flex;
   list-style: none;
-  gap: 40px;
   margin: 0;
   padding: 0;
   height: 100%;
   align-items: center;
+  width: 650px; /* Increased width to accommodate all items properly */
+  justify-content: flex-start; /* Align items from the start instead of space-between */
 }
 
 .nav-item {
@@ -83,17 +107,75 @@
   text-transform: uppercase;
 }
 
+/* Make TEXTURA properly centered with correct font weight */
+.nav-item.farro-font {
+  font-weight: 700;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Ensure logo appears above other elements if needed */
+}
+
+/* Position the Home menu item */
+.nav-item:nth-child(1) { 
+  margin-left: 80px;
+  margin-right: 20px;
+}
+
+/* Fix Category positioning so it doesn't overlap with TEXTURA */
+.nav-item:nth-child(2) { 
+  display: flex; /* Show Category menu item */
+  margin-right: 20px;
+  position: relative; /* Ensure it respects normal flow */
+  margin-left: 0; /* Remove any left margin if present */
+}
+
+/* Position Service with proper spacing - adjust right margin */
+.nav-item:nth-child(4) { 
+  margin-left: auto; /* Push to the right end of nav-list */
+  margin-right: 80px;
+}
+
+/* Enhance search bar styling */
 .header-icons {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.icon-link {
-  color: #000;
+/* Search container for input and icon */
+.search-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  position: relative;
+}
+
+/* Style for the search input */
+.search-input {
+  height: 36px;
+  width: 180px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 0 35px 0 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Position the search icon inside the input */
+.icon-link.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* User icon styling */
+.icon-link.user-icon {
+  margin-right: 5px;
+  transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
