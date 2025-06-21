@@ -1,12 +1,49 @@
-# React + Vite
+To clone the repository using Git, follow these steps:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. **Install Git** (if you haven't already):
 
-Currently, two official plugins are available:
+   * On macOS or Linux, you can use the terminal:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+     ```bash
+     git --version
+     ```
 
-## Expanding the ESLint configuration
+     If Git is not installed, you can install it via Homebrew on macOS or using your package manager on Linux.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+   * On Windows, download Git from [Git's official website](https://git-scm.com/) and follow the installation instructions.
+
+2. **Clone the repository**:
+   Open your terminal or command prompt and use the following command to clone the repository:
+
+   ```bash
+   git clone https://github.com/PhucFanMu20Nams/textura.git
+   ```
+
+3. **Navigate into the project directory**:
+   After the repository is cloned, you can navigate into the project directory using:
+
+   ```bash
+   cd textura
+   ```
+
+4. **Check the files**:
+   You can verify that the repository has been cloned correctly by listing the files:
+
+   ```bash
+   ls
+   ```
+
+5. **Install dependencies** (if applicable):
+   If the project requires dependencies, you can install them (for instance, if it's a Node.js project):
+
+   ```bash
+   npm install
+   ```
+
+   Or if it's a Python project, you might run:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+Now, you should have the repository cloned and ready for use! Let me know if you need further assistance.
