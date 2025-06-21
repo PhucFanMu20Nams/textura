@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import React from 'react'
+import Hero from './Hero'
+import PopularItems from './PopularItems'
 
 function Main({ onOpenModal, showNotification }) {
-  const [activeTab, setActiveTab] = useState('all')
-
   const handleContactSubmit = (e) => {
     e.preventDefault()
     showNotification('Message sent successfully!')
@@ -10,39 +10,9 @@ function Main({ onOpenModal, showNotification }) {
 
   return (
     <main>
-      {/* Hero Section */}
-      <section className="hero" id="home">
-        <div className="container">
-          <div className="hero-content">
-            <h1 className="h1 hero-title">Creative Design Solutions</h1>
-            <p className="hero-text">
-              We are a creative design agency focused on bringing your ideas to life.
-            </p>
-            <button className="btn btn-primary" onClick={onOpenModal}>Get Started</button>
-          </div>
-          
-          <figure className="hero-banner">
-            <img src="/assets/images/banner-1.jpg" alt="Creative design banner" />
-          </figure>
-        </div>
-      </section>
+      <Hero />
+      <PopularItems />
 
-      {/* About Section */}
-      <section className="about" id="about">
-        <div className="container">
-          <h2 className="h2 section-title">About Us</h2>
-          <p className="section-text">
-            We are a team of dedicated designers and developers crafting beautiful digital experiences.
-          </p>
-          
-          <div className="about-content">
-            {/* About content here */}
-          </div>
-        </div>
-      </section>
-
-      {/* Services, Features, Blog sections would go here */}
-      
       {/* Contact Section */}
       <section className="contact" id="contact">
         <div className="container">

@@ -73,6 +73,7 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s ease;
+  padding: 12px;
 }
 
 .shop-now-btn:hover {
